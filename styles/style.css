@@ -99,6 +99,25 @@ body {
     font-family: var(--fonte-secundaria);
 }
 
+.apresentacao__conteudo__projetos__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    gap: 20px;
+}
+
+.links__projetos {
+    font-size: 1.3rem;
+    font-family: var(--fonte-secundaria);
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+.links__projetos:hover {
+    color: var(--cor-terciaria);
+}
+
 .apresentacao__links {
     display: flex;
     flex-direction: column;
@@ -112,8 +131,6 @@ body {
     font-weight: 400;
     font-size: 1.5rem;
 }
-
-
 
 .apresentacao__links__navegacao {
     display: flex;
