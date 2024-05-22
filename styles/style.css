@@ -26,6 +26,7 @@ body {
 
 .cabecalho {
     padding-top: 2%;
+    position: relative;
 }
 
 .cabecalho__menu {
@@ -34,7 +35,24 @@ body {
     gap: 80px;
 }
 
+.cabecalho__menu__mobile {
+    display: none;
+}
+
+.cabecalho___menu__butao {
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 28px;
+    top: 18px;
+}
+
 .cabecalho__menu__link {
+    display: flex;
+    gap: 5px;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
@@ -42,11 +60,10 @@ body {
     text-decoration: none;
 }
 
-.cabecalho__menu__link:hover {
-    color: var(--cor-hover);
-    text-decoration: underline;
-
+.cabecalho__menu__link:hover::before {
+    content: url('../assets/ufo.svg');
 }
+
 
 .apresentacao {
     padding: 5% 15%;
@@ -66,6 +83,11 @@ body {
 .apresentacao__conteudo__titulo {
     font-size: 2.25rem;
     font-family: var(--fonte-primaria);
+}
+
+#apresentacao__conteudo__nome::after {
+    content: "|";
+    animation: piscar 1s infinite;
 }
 
 .titulo-destaque {
@@ -91,6 +113,8 @@ body {
     font-size: 1.5rem;
 }
 
+
+
 .apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
@@ -110,6 +134,7 @@ body {
 .apresentacao__links__navegacao:hover {
     color: var(--cor-primaria);
     background-color: var(--cor-hover);
+    border: 2px solid yellow;
 }
 
 
@@ -121,22 +146,37 @@ body {
 .rodape {
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
-    padding: 24px;
+    padding: 15px;
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
 
     .cabecalho {
-        padding: 10%;
+        padding: 5%;
     }
 
     .cabecalho__menu {
-        justify-content: center;
-        gap: 50px;
+        display: none;
+    }
+
+    .cabecalho__menu__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 0;
+    }
+
+    .invisivel {
+        display: none;
+    }
+
+    .cabecalho___menu__butao {
+        display: initial;
     }
 
     .apresentacao {
@@ -144,8 +184,22 @@ body {
         padding: 5%;
     }
 
-    .apresentacao__conteudo {
+    .apresentacao__c onteudo {
         width: auto;
     }
 
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
