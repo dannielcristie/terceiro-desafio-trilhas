@@ -142,7 +142,7 @@ body {
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 21.5px 0;
+    padding: 22.5px 20px;
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
@@ -201,7 +201,7 @@ body {
         padding: 5%;
     }
 
-    .apresentacao__c onteudo {
+    .apresentacao__conteudo {
         width: auto;
     }
 
